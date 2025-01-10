@@ -2,13 +2,13 @@
 
 > **Documentation Resources** 📚
 
-+ [Official Deployment Guide](https://docs.openim.io/guides/gettingstarted/dockercompose)
+- [Official Deployment Guide](https://docs.openim.io/guides/gettingstarted/dockercompose)
 
 ## :busts_in_silhouette: Community
 
-+ 💬 [Follow us on Twitter](https://twitter.com/founder_im63606)
-+ 🚀 [Join our Slack channel](https://join.slack.com/t/openimsdk/shared_invite/zt-22720d66b-o_FvKxMTGXtcnnnHiMqe9Q)
-+ :eyes: [Join our WeChat Group](https://openim-1253691595.cos.ap-nanjing.myqcloud.com/WechatIMG20.jpeg)
+- 💬 [Follow us on Twitter](https://twitter.com/founder_im63606)
+- 🚀 [Join our Slack channel](https://join.slack.com/t/openimsdk/shared_invite/zt-22720d66b-o_FvKxMTGXtcnnnHiMqe9Q)
+- :eyes: [Join our WeChat Group](https://openim-1253691595.cos.ap-nanjing.myqcloud.com/WechatIMG20.jpeg)
 
 ## Environment Preparation 🌍
 
@@ -52,8 +52,12 @@ docker logs -f openim-server
 docker logs -f openim-chat
 ```
 
+> ### Note:
+>
+> If you can't connect Docker Hub, you can use the following command:
+>
+> `docker compose -f docker-compose-cn.yaml up -d`
+
 ## Quick Experience ⚡
 
 For a quick experience with OpenIM services, please visit the [Quick Test Server Guide](https://docs.openim.io/guides/gettingStarted/quickTestServer).
-```
-
