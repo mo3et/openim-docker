@@ -4,7 +4,7 @@ networks:
 
 services:
   mongo:
-    image: "${MONGO_IMAGE}"
+    image: "${CN_MONGO_IMAGE}"
     container_name: mongo
     command: >
       bash -c '
@@ -48,7 +48,7 @@ services:
       - openim
 
   redis:
-    image: "${REDIS_IMAGE}"
+    image: "${CN_REDIS_IMAGE}"
     container_name: redis
     volumes:
       - "${DATA_DIR}/components/redis/data:/data"
@@ -71,7 +71,7 @@ services:
       - openim
 
   etcd:
-    image: "${ETCD_IMAGE}"
+    image: "${CN_ETCD_IMAGE}"
     container_name: etcd
     ports:
       - "12379:2379"
@@ -91,7 +91,7 @@ services:
       - openim
 
   kafka:
-    image: "${KAFKA_IMAGE}"
+    image: "${CN_KAFKA_IMAGE}"
     container_name: kafka
     user: root
     restart: always
@@ -112,7 +112,7 @@ services:
       - openim
 
   minio:
-    image: "${MINIO_IMAGE}"
+    image: "${CN_MINIO_IMAGE}"
     ports:
       - "${MINIO_PORT}:9000"
       - "${MINIO_CONSOLE_PORT}:9090"
@@ -148,7 +148,7 @@ services:
       - openim
 
   prometheus:
-    image: ${PROMETHEUS_IMAGE}
+    image: ${CN_PROMETHEUS_IMAGE}
     container_name: prometheus
     hostname: prometheus
     restart: always
@@ -166,7 +166,7 @@ services:
       - openim
 
   alertmanager:
-    image: ${ALERTMANAGER_IMAGE}
+    image: ${CN_ALERTMANAGER_IMAGE}
     container_name: alertmanager
     hostname: alertmanager
     restart: always
@@ -179,7 +179,7 @@ services:
       - openim
 
   grafana:
-    image: ${GRAFANA_IMAGE}
+    image: ${CN_GRAFANA_IMAGE}
     container_name: grafana
     hostname: grafana
     user: root
@@ -198,7 +198,7 @@ services:
       - openim
 
   node-exporter:
-    image: ${NODE_EXPORTER_IMAGE}
+    image: ${CN_NODE_EXPORTER_IMAGE}
     container_name: node-exporter
     hostname: node-exporter
     restart: always
